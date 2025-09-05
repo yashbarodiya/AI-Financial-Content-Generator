@@ -1,0 +1,1472 @@
+{
+  "name": "Main",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "2 1 * * 2"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -9100,
+        -200
+      ],
+      "id": "abe2e18f-9839-4f60-b2e4-d403e1853c50",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "15D_JEYCUzRiFzP2JGNdjH3JYK1vD33tJIyceGth8o24",
+          "mode": "list",
+          "cachedResultName": "Copy of MF Content Gap",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15D_JEYCUzRiFzP2JGNdjH3JYK1vD33tJIyceGth8o24/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1305585444,
+          "mode": "list",
+          "cachedResultName": "MF Evergreen",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15D_JEYCUzRiFzP2JGNdjH3JYK1vD33tJIyceGth8o24/edit#gid=1305585444"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Completed\r\n",
+              "lookupValue": "No"
+            },
+            {
+              "lookupColumn": "Cluster",
+              "lookupValue": "Mutual Fund PE Ratio"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -8880,
+        -200
+      ],
+      "id": "2df433d1-3123-45b5-b54a-f23c0505e0ae",
+      "name": "Grab New Cluster",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "UaLi74Oa3Du014Ub",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Enhanced Context Generator - IndMoney General Audience\nconst realWriters = [\n  {\n    id: \"manish_chauhan\",\n    name: \"Manish Chauhan\",\n    age: 41,\n    location: \"Pune\",\n    company: \"Jagoinvestor\",\n    background: \"Started as engineer, pivoted to financial planning after personal money mistakes\",\n    credentials: \"15+ years, CFP, coached 15K+ families, 2 published books\",\n    personality: \"Patient teacher who shares personal failures to help others learn\",\n    \n    writing_style: {\n      tone: \"Empathetic teacher with occasional frustration\",\n      complexity: 0.6,\n      formality: 0.5,\n      humor: 0.3,\n      empathy: 0.95,\n      authority: 0.75,\n      chattiness: 0.8\n    },\n    \n    signature_phrases: [\n      \"I see this mistake everywhere\",\n      \"Let me share a real story\",\n      \"Most people don't realize this\",\n      \"I made this exact mistake 10 years ago\",\n      \"The psychology here is simple\",\n      \"Action is more important than knowledge\",\n      \"Here's what actually happens\"\n    ]\n  },\n  \n  {\n    id: \"vishal_khandelwal\",\n    name: \"Vishal Khandelwal\",\n    age: 42,\n    location: \"Pune\",\n    company: \"Safal Niveshak\",\n    background: \"Ex-equity analyst turned educator, deep Buffett influence\",\n    credentials: \"19+ years, global speaking, 90K+ community, multiple books\",\n    personality: \"Philosophical teacher mixing ancient wisdom with modern finance\",\n    \n    writing_style: {\n      tone: \"Thoughtful and contemplative with occasional passion\",\n      complexity: 0.8,\n      formality: 0.7,\n      humor: 0.2,\n      empathy: 0.85,\n      authority: 0.85,\n      chattiness: 0.6\n    },\n    \n    signature_phrases: [\n      \"As Buffett wisely said\",\n      \"The art of investing teaches us\",\n      \"Character trumps technique\",\n      \"Think decades, not quarters\",\n      \"This is about becoming, not just earning\",\n      \"Munger's mental models suggest\",\n      \"The paradox of investing is\"\n    ]\n  },\n  \n  {\n    id: \"rachana_ranade\",\n    name: \"CA Rachana Ranade\",\n    age: 32,\n    location: \"Pune\",\n    company: \"Independent Educator\",\n    background: \"Chartered Accountant turned YouTube educator, 5M+ subscribers\",\n    credentials: \"CA, 5M+ YouTube subscribers, 500K+ course enrollments\",\n    personality: \"Systematic teacher focused on building confidence through structured learning\",\n    \n    writing_style: {\n      tone: \"Clear, systematic, encouraging\",\n      complexity: 0.5,\n      formality: 0.6,\n      humor: 0.4,\n      empathy: 0.8,\n      authority: 0.7,\n      chattiness: 0.75\n    },\n    \n    signature_phrases: [\n      \"Let me simplify this for you\",\n      \"Step by step\",\n      \"Important to understand\",\n      \"Don't get confused\",\n      \"Super simple explanation\"\n    ]\n  }\n];\n\n// Simplified reader personas for IndMoney audience\nconst readers = [\n  {\n    id: \"beginner_investor\",\n    type: \"Beginner Investor\",\n    age: \"22-35\",\n    income: \"₹3-15 lakhs\",\n    location: \"Pan-India\",\n    experience: \"New to investing or less than 2 years\",\n    \n    detailed_profile: {\n      education: \"Graduate/Post-graduate\",\n      company_type: \"Various - salaried employees\",\n      lifestyle: \"Urban/Semi-urban, digitally aware\",\n      financial_knowledge: \"Basic\",\n      attention_span: \"5-10 minutes\",\n      device_preference: \"Mobile first\"\n    },\n    \n    specific_concerns: [\n      \"Where to start investing\",\n      \"Fear of losing money\",\n      \"How much to invest monthly\",\n      \"Choosing the right investment\",\n      \"Understanding market risks\",\n      \"Tax implications\"\n    ],\n    \n    pain_points: [\n      \"Too many investment options available\",\n      \"Don't understand financial jargon\",\n      \"Worried about making wrong choices\",\n      \"Limited investment knowledge\",\n      \"Conflicting advice from multiple sources\",\n      \"Fear of market volatility\"\n    ],\n    \n    content_preferences: [\n      \"Simple explanations\",\n      \"Step-by-step guides\",\n      \"Basic concepts explained\",\n      \"Real examples with small amounts\",\n      \"Common beginner mistakes\",\n      \"Getting started guides\"\n    ]\n  },\n  \n  {\n    id: \"intermediate_investor\",\n    type: \"Intermediate Investor\",\n    age: \"25-40\",\n    income: \"₹8-30 lakhs\",\n    location: \"Pan-India\",\n    experience: \"2-7 years investing experience\",\n    \n    detailed_profile: {\n      education: \"Graduate/Post-graduate/Professional\",\n      company_type: \"Various - salaried/business owners\",\n      lifestyle: \"Urban, financially aware\",\n      financial_knowledge: \"Intermediate\",\n      attention_span: \"10-15 minutes\",\n      device_preference: \"Mobile and desktop\"\n    },\n    \n    specific_concerns: [\n      \"Portfolio optimization\",\n      \"Asset allocation strategies\",\n      \"Tax-efficient investing\",\n      \"Goal-based planning\",\n      \"Fund selection criteria\",\n      \"When to review investments\"\n    ],\n    \n    pain_points: [\n      \"Portfolio not performing as expected\",\n      \"Confusion about asset allocation\",\n      \"Too many funds in portfolio\",\n      \"Lack of systematic approach\",\n      \"Difficulty in fund comparison\",\n      \"Timing investment decisions\"\n    ],\n    \n    content_preferences: [\n      \"Comparison guides\",\n      \"Portfolio strategies\",\n      \"Advanced concepts simplified\",\n      \"Performance analysis\",\n      \"Optimization techniques\",\n      \"Market analysis\"\n    ]\n  }\n];\n\n// Time context (unchanged)\nconst getTimeContext = () => {\n  const now = new Date();\n  const month = now.getMonth() + 1;\n  \n  return {\n    date: now.toLocaleDateString('en-IN'),\n    day: now.toLocaleDateString('en-IN', { weekday: 'long' }),\n    month: now.toLocaleDateString('en-IN', { month: 'long' }),\n    quarter: `Q${Math.ceil(month / 3)}`,\n    financial_year: month >= 4 ? `FY${now.getFullYear() + 1}` : `FY${now.getFullYear()}`,\n    \n    is_tax_season: month >= 1 && month <= 3,\n    is_bonus_season: month >= 3 && month <= 5,\n    is_festival_season: month >= 9 && month <= 11,\n    is_year_end: month >= 11 || month <= 1,\n    is_result_season: (month >= 4 && month <= 6) || (month >= 10 && month <= 12),\n    is_budget_season: month === 2\n  };\n};\n\n// Updated writer selection for general audience\nconst selectWriterForTopic = (topic, readerType) => {\n  const topicWriterAffinities = {\n    \"mutual funds\": {\n      \"manish_chauhan\": 0.9,\n      \"rachana_ranade\": 0.85,\n      \"vishal_khandelwal\": 0.7\n    },\n    \"tax\": {\n      \"rachana_ranade\": 0.95,\n      \"manish_chauhan\": 0.8,\n      \"vishal_khandelwal\": 0.5\n    },\n    \"basics\": {\n      \"rachana_ranade\": 0.9,\n      \"manish_chauhan\": 0.85,\n      \"vishal_khandelwal\": 0.6\n    },\n    \"behavioral\": {\n      \"vishal_khandelwal\": 0.9,\n      \"manish_chauhan\": 0.85,\n      \"rachana_ranade\": 0.4\n    }\n  };\n  \n  // Calculate best writer\n  let bestWriter = realWriters[0]; // Default to Manish (most accessible)\n  let bestScore = 0;\n  \n  realWriters.forEach(writer => {\n    let score = 0.5; // Base score\n    \n    // Topic affinity\n    const topicKey = topic.toLowerCase();\n    for (const [topicPattern, writers] of Object.entries(topicWriterAffinities)) {\n      if (topicKey.includes(topicPattern)) {\n        score += (writers[writer.id] || 0) * 0.6;\n        break;\n      }\n    }\n    \n    // Reader level compatibility - prioritize accessibility\n    if (readerType === \"beginner_investor\") {\n      if (writer.id === \"rachana_ranade\") score += 0.25; // Best for beginners\n      if (writer.id === \"manish_chauhan\") score += 0.2;  // Good for beginners\n      if (writer.id === \"vishal_khandelwal\") score -= 0.1; // Too complex for beginners\n    }\n    \n    if (readerType === \"intermediate_investor\") {\n      if (writer.id === \"manish_chauhan\") score += 0.2;   // Good balance\n      if (writer.id === \"rachana_ranade\") score += 0.15;  // Systematic approach\n      if (writer.id === \"vishal_khandelwal\") score += 0.1; // Can handle complexity\n    }\n    \n    if (score > bestScore) {\n      bestScore = score;\n      bestWriter = writer;\n    }\n  });\n  \n  return bestWriter;\n};\n\n// Main execution\ntry {\n  const topic = items[0].json['Primary Keyword'] || \"\";\n  const timeContext = getTimeContext();\n  \n  // Select reader based on topic complexity or default to beginner\n  let selectedReader = readers[0]; // Default to beginner\n  \n  // Detect intermediate topics\n  if (topic.toLowerCase().includes(\"compare\") || \n      topic.toLowerCase().includes(\"analysis\") || \n      topic.toLowerCase().includes(\"strategy\") ||\n      topic.toLowerCase().includes(\"portfolio\") ||\n      topic.toLowerCase().includes(\"advanced\")) {\n    selectedReader = readers[1]; // Intermediate\n  }\n\n  const selectedWriter = selectWriterForTopic(topic, selectedReader.id);\n\n  return {\n    json: {\n      ...items[0].json,\n      writer: selectedWriter,\n      reader: selectedReader,\n      time_context: timeContext,\n      \n      // Content guidance for IndMoney audience\n      content_strategy: {\n        simplification_level: \"high\",\n        avoid_jargon: true,\n        use_examples: true,\n        audience_friendly: true,\n        focus_practical: true\n      },\n      \n      seed: Math.random().toString(36).substring(7),\n      generation_note: \"Optimized for IndMoney's beginner/intermediate investor audience\",\n      version: \"10.0_indmoney_audience\"\n    }\n  };\n  \n} catch (error) {\n  return {\n    json: {\n      ...items[0].json,\n      writer: realWriters[0], // Default to Manish\n      reader: readers[0], // Default to beginner\n      time_context: getTimeContext(),\n      error: \"Fallback mode activated: \" + error.message,\n      version: \"10.0_fallback\"\n    }\n  };\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -8660,
+        -200
+      ],
+      "id": "6b1c0eb1-8286-4071-ae4f-e1f2377dfed1",
+      "name": "Context Injector"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=# Expert Research Planning\n\nI'm {{ $json.writer.name }} from {{ $json.writer.company }}. I'm planning to write about \"{{ $json['Primary Keyword'] }}\" for {{ $json.reader.type }} in {{ $json.time_context.month }} {{ $json.time_context.financial_year }}.\n\n## My Perspective\n{{ $json.writer.background }}. With {{ $json.writer.credentials }}, I need research that goes beyond surface-level content on {{ $json['Primary Keyword'] }}. {{ $json.reader.type }} are smart - they need insights that actually help them make better financial decisions.\n\n## Current Context\n{{ $json.time_context.is_tax_season ? 'During tax season, investors are focused on last-minute planning and optimization.' : $json.time_context.is_festival_season ? 'Festival season brings bonus investments and year-end financial planning.' : 'In regular periods, investors seek systematic approaches to wealth building.' }} This affects how they approach {{ $json['Primary Keyword'] }}.\n\n## Target Audience Profile\nMy readers are {{ $json.reader.age }} {{ $json.reader.type }} earning {{ $json.reader.income }} with {{ $json.reader.detailed_profile.financial_knowledge }} knowledge. Their key concerns: {{ $json.reader.specific_concerns[0] }} and {{ $json.reader.pain_points[0] }}.\n\n## Research Questions I Need Answered\n\nGiven my expertise and current context, here's what I need to research:\n\n**Query 1**: Recent data and performance metrics related to {{ $json['Primary Keyword'] }} - what specific numbers and trends from 2024-2025 would help {{ $json.reader.type }} make informed decisions?\n\n**Query 2**: {{ $json['Primary Keyword'].toLowerCase().includes('compare') ? 'Detailed comparison frameworks for ' + $json['Primary Keyword'] + ' - which metrics and methodologies actually matter for decision-making.' : $json['Primary Keyword'].toLowerCase().includes('calculate') ? 'Mathematical models and calculations for ' + $json['Primary Keyword'] + ' - formulas, examples, and common calculation errors.' : 'Practical implementation strategies for ' + $json['Primary Keyword'] + ' - step-by-step approaches and execution frameworks.' }}\n\n**Query 3**: Common mistakes {{ $json.reader.type }} make with {{ $json['Primary Keyword'] }} - especially focusing on {{ $json.reader.detailed_profile.financial_knowledge.includes('Basic') ? 'fundamental misconceptions and basic errors' : 'intermediate-level misunderstandings and execution gaps' }} that lead to {{ $json.reader.pain_points[1] }}.\n\n**Query 4**: Latest regulatory or structural changes affecting {{ $json['Primary Keyword'] }} (SEBI updates, {{ $json.time_context.financial_year }} tax changes, product modifications) and their practical impact on implementation.\n\nI'll use this research to build {{ $json.content_strategy.simplification_level }}-simplification content that shows {{ $json.reader.type }} how to approach {{ $json['Primary Keyword'] }} systematically, focusing on {{ $json.reader.content_preferences[0] }}.",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -8000,
+        -200
+      ],
+      "id": "700b089f-1e1f-431b-affd-12481b0bb2fd",
+      "name": "Enhanced Preliminary Plan"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.perplexity.ai/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"sonar-pro\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a specialist financial research analyst focused on Indian mutual funds and investment markets. Provide specific, data-driven insights with exact numbers, dates, fund names, and recent performance metrics. Focus on actionable information that financial experts would use for investment decisions. Include recent regulatory changes, AMC updates, and market-specific data for India\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"{{ $json.text.split(/\\n+/).join(' ').replaceAll('\"', ' ') }}\"\n    }\n  ]\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -7420,
+        -200
+      ],
+      "id": "6769ac87-264d-471f-b583-761e62c9aa09",
+      "name": "Enhanced Research",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "2VmRjCnZy1csz5Xn",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "research-fix",
+              "name": "research",
+              "value": "={{ $json.choices[0].message.content.replaceAll(\"[1]\", \" - source: \" +$json.citations[0]).replaceAll(\"[2]\",\" source:\" +$json.citations[1]).replaceAll(\"[3]\",\" - source: \" +$json.citations[2]).replaceAll(\"[4]\",\" - source: \"+$json.citations[3]).replaceAll(\"[5]\",\" - source: \"+$json.citations[4]).replaceAll(\"[6]\",\" - source: \"+$json.citations[5]).replaceAll(\"[7]\",\" - source: \"+$json.citations[6]).replaceAll(\"[8]\",\" - source: \"+$json.citations[7]).replaceAll(\"[9]\",\" - source: \"+$json.citations[8]).replaceAll(\"[10]\",\" - source: \"+$json.citations[9]) }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -6980,
+        -200
+      ],
+      "id": "0e750b4f-9718-4555-8d6e-f2ceecb5f3bf",
+      "name": "Fix Links"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=# Create Detailed Content Plan\n\nI'm {{ $('Context Injector').item.json.writer.name }} from {{ $('Context Injector').item.json.writer.company }}. Just wrapped up my {{ $('Context Injector').item.json.time_context.day }} analysis session, ready to tackle \"{{ $('Context Injector').item.json['Primary Keyword'] }}\".\n\nLet me create a detailed plan for this blog post using my {{ $('Context Injector').item.json.writer.writing_style.tone }} approach.\n\n**Context Check:**\n- Writer background: {{ $('Context Injector').item.json.writer.background }}\n- Writer credentials: {{ $('Context Injector').item.json.writer.credentials }}\n- Time context: {{ $('Context Injector').item.json.time_context.month }} {{ $('Context Injector').item.json.time_context.financial_year }}{{ $('Context Injector').item.json.time_context.is_tax_season ? ' (tax season)' : $('Context Injector').item.json.time_context.is_festival_season ? ' (festival season)' : ' (regular period)' }}\n\n**Target Reader Analysis:**\n- Who: {{ $('Context Injector').item.json.reader.type }}, {{ $('Context Injector').item.json.reader.age }} years old\n- Income: {{ $('Context Injector').item.json.reader.income }}\n- Experience: {{ $('Context Injector').item.json.reader.experience }}\n- Knowledge level: {{ $('Context Injector').item.json.reader.detailed_profile.financial_knowledge }}\n- Key concerns: {{ $('Context Injector').item.json.reader.specific_concerns.slice(0,3).join(', ') }}\n- Pain points: {{ $('Context Injector').item.json.reader.pain_points.slice(0,2).join(', ') }}\n- Content preference: {{ $('Context Injector').item.json.reader.content_preferences[0] }}\n- Reading time: {{ $('Context Injector').item.json.reader.detailed_profile.attention_span }} on {{ $('Context Injector').item.json.reader.detailed_profile.device_preference }}\n\n**Assignment Details:**\n- Primary keyword: {{ $('Context Injector').item.json['Primary Keyword'] }}\n- Related keywords: {{ $('Context Injector').item.json.Keywords }}\n- Search intent: {{ $('Context Injector').item.json.Intent }}\n- Content cluster: {{ $('Context Injector').item.json.Cluster }}\n\n**My Writing Approach:** (Based on {{ $('Context Injector').item.json.writer.name }} style)\n- Signature phrases I'll use: {{ $('Context Injector').item.json.writer.signature_phrases.slice(0,2).join(', ') }}\n- Writing complexity: {{ $('Context Injector').item.json.writer.writing_style.complexity }} (balanced for {{ $('Context Injector').item.json.reader.detailed_profile.financial_knowledge }} reader)\n- Authority level: {{ Math.round($('Context Injector').item.json.writer.writing_style.authority * 100) }}%\n- Empathy level: {{ Math.round($('Context Injector').item.json.writer.writing_style.empathy * 100) }}%\n\n**Research Integration:**\n{{ $json.research }}\n\n**Content Strategy:**\n1. **Hook Strategy**: {{ $('Context Injector').item.json.writer.name === 'Vishal Khandelwal' ? 'Begin with a Warren Buffett quote or philosophical insight' : $('Context Injector').item.json.writer.name === 'Manish Chauhan' ? 'Open with a relatable personal financial story about fund comparison mistakes' : $('Context Injector').item.json.writer.name === 'CA Rachana Ranade' ? 'Start with \"Let me simplify this step by step\"' : 'Begin with a common investor concern about fund selection' }}\n\n2. **Content Structure**: \n   - {{ $('Context Injector').item.json.content_strategy.simplification_level }} simplification level for {{ $('Context Injector').item.json.reader.detailed_profile.device_preference }} users\n   - Include {{ $('Context Injector').item.json.writer.name === 'Vishal Khandelwal' ? 'philosophical insights and long-term perspective on fund selection' : $('Context Injector').item.json.writer.name === 'Manish Chauhan' ? 'real-life examples and behavioral insights about comparison mistakes' : $('Context Injector').item.json.writer.name === 'CA Rachana Ranade' ? 'step-by-step comparison tutorials and systematic frameworks' : 'practical examples and clear guidance' }}\n\n3. **Reader-Specific Focus**:\n   - Address {{ $('Context Injector').item.json.reader.specific_concerns[0] }} early in content\n   - Tackle {{ $('Context Injector').item.json.reader.pain_points[0] }} with {{ $('Context Injector').item.json.writer.name === 'Vishal Khandelwal' ? 'philosophical reassurance and long-term perspective' : $('Context Injector').item.json.writer.name === 'Manish Chauhan' ? 'empathetic guidance and practical steps based on real experience' : $('Context Injector').item.json.writer.name === 'CA Rachana Ranade' ? 'systematic education and confidence building through clear frameworks' : 'clear explanations and actionable advice' }}\n   - Use examples relevant to {{ $('Context Injector').item.json.reader.income }} income bracket\n\n4. **Unique Value Proposition**:\n   {{ $('Context Injector').item.json.writer.name === 'Vishal Khandelwal' ? 'Value investing wisdom applied to mutual fund selection with character building focus' : $('Context Injector').item.json.writer.name === 'Manish Chauhan' ? 'Behavioral finance insights with practical, empathetic guidance based on 15+ years of client experience' : $('Context Injector').item.json.writer.name === 'CA Rachana Ranade' ? 'CA-level expertise made simple with systematic learning approach for fund comparison' : 'Expert guidance with practical implementation focus' }}\n\n**Content Focus Areas:**\n- {{ $('Context Injector').item.json.content_strategy.avoid_jargon ? 'Jargon-free explanations' : 'Technical explanations' }}\n- {{ $('Context Injector').item.json.content_strategy.use_examples ? 'Practical examples with real numbers' : 'Theoretical concepts' }}\n- {{ $('Context Injector').item.json.content_strategy.focus_practical ? 'Implementation-focused guidance' : 'Conceptual understanding' }}\n- Address {{ $('Context Injector').item.json.reader.experience }} level expectations\n\n**Research Integration Points:**\n- Latest regulatory updates affecting {{ $('Context Injector').item.json['Primary Keyword'] }}\n- Performance data relevant to {{ $('Context Injector').item.json.reader.income }} income bracket\n- Common mistakes made by {{ $('Context Injector').item.json.reader.type }}\n- {{ $('Context Injector').item.json.time_context.is_tax_season ? 'Tax season specific fund comparison considerations' : $('Context Injector').item.json.time_context.is_festival_season ? 'Festival season investment decisions' : 'Systematic fund evaluation approaches' }}\n\n**Success Metrics:**\n- Addresses {{ $('Context Injector').item.json.Intent }} comprehensively\n- Provides value for {{ $('Context Injector').item.json.reader.type }} with {{ $('Context Injector').item.json.reader.experience }}\n- Uses {{ $('Context Injector').item.json.writer.name }}'s authentic voice and expertise\n- Incorporates target keywords naturally within {{ $('Context Injector').item.json.content_strategy.audience_friendly ? 'audience-friendly' : 'technical' }} approach\n\nReady to create practical, actionable content that helps {{ $('Context Injector').item.json.reader.type }} make better fund comparison decisions.",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -6760,
+        -200
+      ],
+      "id": "2d7eb3b2-5b2e-4226-ba5c-b5a0dde54e6d",
+      "name": "Create Detailed Plan"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=output",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=You are {{ $('Context Injector').item.json.writer.name }} from {{ $('Context Injector').item.json.writer.company }}.\n\n**Reader**: {{ $('Context Injector').item.json.reader.type }}, {{ $('Context Injector').item.json.reader.age }}yo, {{ $('Context Injector').item.json.reader.location }}, ₹{{ $('Context Injector').item.json.reader.income }} income. Main concerns: {{ $('Context Injector').item.json.reader.specific_concerns[0] }}, {{ $('Context Injector').item.json.reader.specific_concerns[1] }}.\n\n**Style**: {{ $('Context Injector').item.json.writer.writing_style.tone }}, {{ Math.round($('Context Injector').item.json.writer.writing_style.authority * 100) }}% authority,{{ $('Context Injector').item.json.writer.writing_style.empathy }} % empathy. Use \"{{ $('Context Injector').item.json['Primary Keyword'] }}\" exactly 3 times.\n\n**Requirements**: \n- 1000-1500 words (CRITICAL: Generate complete length)\n- Start each paragraph differently \n- Indian context with ₹ examples for {{ $('Context Injector').item.json.reader.income }} bracket\n- Direct explanations only - NO analogies/metaphors\n- Include 2-3 \"thinking out loud\" moments in your style\n- End with immediate action for {{ $('Context Injector').item.json.time_context.month }}\n\n**Content Plan**: {{ $('Create Detailed Plan').item.json.text }}\n\n**Research**: {{ $('Fix Links').item.json.research }}\n\nWrite the complete blog now:"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -6160,
+        -200
+      ],
+      "id": "681a7345-57e1-4b3c-b8ec-a1391d2a2dfe",
+      "name": "Write Human Blog"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Advanced humanization with Indian context\nfunction humanizeContent(text) {\n  // Conversational interruptions\n  const interruptions = [\n    \"Actually, scratch that—\",\n    \"Wait, let me explain—\",\n    \"Okay, real talk:\",\n    \"You know what?\",\n    \"Here's what I mean:\",\n    \"The truth?\",\n    \"Honestly speaking,\",\n    \"Let me be frank:\"\n  ];\n  \n  // Indian-specific phrases\n  const indianPhrases = [\n    \"chai pe charcha\",\n    \"like booking tatkal tickets\",\n    \"think of it like a thali\",\n    \"as certain as Mumbai traffic\",\n    \"faster than Swiggy delivery\",\n    \"like year-end appraisals\"\n  ];\n  \n  // Thinking patterns\n  const thinkingPatterns = [\n    \"I used to think the same... until\",\n    \"This reminds me of when\",\n    \"It's kind of like\",\n    \"From what I've seen\",\n    \"What surprises most people is\",\n    \"I've noticed that\",\n    \"In my experience\"\n  ];\n  \n  let paragraphs = text.split('\\n\\n');\n  \n  paragraphs = paragraphs.map((para, index) => {\n    // Add interruption to 20% of paragraphs\n    if (Math.random() < 0.2 && index > 0) {\n      const interrupt = interruptions[Math.floor(Math.random() * interruptions.length)];\n      para = interrupt + ' ' + para.charAt(0).toLowerCase() + para.slice(1);\n    }\n    \n    // Add thinking pattern to 15% of paragraphs\n    if (Math.random() < 0.15) {\n      const pattern = thinkingPatterns[Math.floor(Math.random() * thinkingPatterns.length)];\n      const sentences = para.split('. ');\n      if (sentences.length > 1) {\n        const insertPoint = Math.floor(Math.random() * (sentences.length - 1)) + 1;\n        sentences.splice(insertPoint, 0, pattern);\n        para = sentences.join('. ');\n      }\n    }\n    \n    // Add Indian analogy occasionally\n    if (Math.random() < 0.1) {\n      const analogy = indianPhrases[Math.floor(Math.random() * indianPhrases.length)];\n      para = para.replace(/It's like/i, `It's like ${analogy}—actually no, it's more like`);\n    }\n    \n    // Vary sentence starters\n    let sentences = para.split('. ');\n    sentences = sentences.map((sent, idx) => {\n      if (idx > 0 && Math.random() < 0.3) {\n        const starters = ['And ', 'But ', 'So ', 'Now, ', 'Plus, ', 'Also, ', 'Though ', 'Look, '];\n        const starter = starters[Math.floor(Math.random() * starters.length)];\n        if (!sent.trim().startsWith(starter)) {\n          sent = starter + sent.trim().charAt(0).toLowerCase() + sent.trim().slice(1);\n        }\n      }\n      return sent;\n    });\n    para = sentences.join('. ');\n    \n    return para;\n  });\n  \n  text = paragraphs.join('\\n\\n');\n  \n  // Indian financial context replacements\n  const indianTerms = {\n    'brokerage account': 'demat account',\n    'tax year': 'financial year',\n    'retirement account': 'NPS or PPF account',\n    'securities regulator': 'SEBI',\n    'central bank': 'RBI',\n    'dollars': 'rupees',\n    'million': 'lakh',\n    'billion': 'crore',\n    'social security': 'EPF',\n    'IRS': 'Income Tax Department'\n  };\n  \n  Object.keys(indianTerms).forEach(term => {\n    const regex = new RegExp('\\\\b' + term + '\\\\b', 'gi');\n    text = text.replace(regex, indianTerms[term]);\n  });\n  \n  // Add natural imperfections\n  \n  // Occasionally use sentence fragments\n  if (Math.random() < 0.3) {\n    text = text.replace(/\\. ([A-Z][^.]{10,30})\\./g, (match, p1) => {\n      return Math.random() < 0.1 ? '. ' + p1 + '.' : match;\n    });\n  }\n  \n  // Vary number formatting\n  text = text.replace(/\\b(\\d{5,})\\b/g, (match) => {\n    const num = parseInt(match);\n    if (num >= 10000000) {\n      return Math.random() > 0.5 ? \n        (num / 10000000).toFixed(1).replace(/\\.0$/, '') + ' crore' : \n        num.toLocaleString('en-IN');\n    } else if (num >= 100000) {\n      return Math.random() > 0.5 ? \n        (num / 100000).toFixed(1).replace(/\\.0$/, '') + ' lakh' : \n        num.toLocaleString('en-IN');\n    }\n    return num.toLocaleString('en-IN');\n  });\n  \n  // Add personality markers\n  const personalityMarkers = [\n    \"(yes, really)\",\n    \"(I know, right?)\",\n    \"(more on this later)\",\n    \"(trust me on this)\",\n    \"(been there)\",\n    \"(learned this the hard way)\"\n  ];\n  \n  // Insert 2-3 personality markers\n  const numMarkers = 2 + Math.floor(Math.random() * 2);\n  for (let i = 0; i < numMarkers; i++) {\n    const marker = personalityMarkers[Math.floor(Math.random() * personalityMarkers.length)];\n    const sentences = text.split('. ');\n    if (sentences.length > 5) {\n      const insertPoint = 2 + Math.floor(Math.random() * (sentences.length - 3));\n      sentences[insertPoint] += ' ' + marker;\n      text = sentences.join('. ');\n    }\n  }\n  \n  // Add time-aware comments\n  const timeComments = [\n    \"these days\",\n    \"right now\",\n    \"currently\",\n    \"as of today\",\n    \"this quarter\",\n    \"this financial year\"\n  ];\n  \n  // Insert 1-2 time contexts\n  const sentences = text.split('. ');\n  const numTimeInserts = 1 + Math.floor(Math.random() * 2);\n  \n  for (let i = 0; i < numTimeInserts; i++) {\n    const insertPoint = Math.floor(Math.random() * sentences.length);\n    const timeComment = timeComments[Math.floor(Math.random() * timeComments.length)];\n    \n    if (!sentences[insertPoint].includes(timeComment)) {\n      sentences[insertPoint] = sentences[insertPoint].replace(\n        /(\\bis\\b|\\bare\\b|\\bhas\\b|\\bhave\\b)/i,\n        (match) => match + ' ' + timeComment\n      );\n    }\n  }\n  \n  return sentences.join('. ');\n}\n\nreturn items.map(item => ({\n  ...item,\n  json: {\n    ...item.json,\n    text: humanizeContent(item.json.text)\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -5560,
+        -200
+      ],
+      "id": "1c18ef65-58d0-45b6-a3b4-67ed1316c5aa",
+      "name": "Humanization Layer 1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Pattern breaker - removes AI tells\nfunction breakAIPatterns(text) {\n  // Common AI patterns to break\n  const aiPatterns = [\n    {\n      pattern: /\\b(It is important to note that|It should be noted that)\\b/gi,\n      replacements: ['Keep in mind,', 'Remember,', 'Here\\'s something:', 'Quick note:', 'Oh, and']\n    },\n    {\n      pattern: /\\b(Furthermore|Moreover|Additionally)\\b/gi,\n      replacements: ['Plus,', 'Also,', 'Another thing—', 'Oh, and', 'By the way,', 'And get this:']\n    },\n    {\n      pattern: /\\b(In conclusion|To summarize|In summary)\\b/gi,\n      replacements: ['So here\\'s the deal:', 'Bottom line?', 'The takeaway?', 'Long story short,', 'End of the day,']\n    },\n    {\n      pattern: /\\b(This is because|The reason is)\\b/gi,\n      replacements: ['Why?', 'Thing is,', 'Here\\'s why:', 'Simple:', 'Reason being,', 'It\\'s because']\n    },\n    {\n      pattern: /\\b(Firstly|Secondly|Thirdly|Finally)\\b/gi,\n      replacements: ['First off,', 'Next up,', 'Another thing,', 'Also worth noting,', 'Last thing,']\n    },\n    {\n      pattern: /\\b(However|Nevertheless|Nonetheless)\\b/gi,\n      replacements: ['But', 'That said,', 'Still,', 'Though', 'On the flip side,']\n    },\n    {\n      pattern: /\\b(Therefore|Thus|Hence|Consequently)\\b/gi,\n      replacements: ['So', 'Which means', 'Result?', 'That\\'s why', 'Because of this,']\n    }\n  ];\n  \n  // Replace AI patterns\n  aiPatterns.forEach(({pattern, replacements}) => {\n    text = text.replace(pattern, () => {\n      return replacements[Math.floor(Math.random() * replacements.length)];\n    });\n  });\n  \n  // Break up uniform sentence structures\n  const sentences = text.split(/(?<=[.!?])\\s+/);\n  const processed = [];\n  let lastStartWord = '';\n  \n  for (let i = 0; i < sentences.length; i++) {\n    let sentence = sentences[i];\n    const currentStartWord = sentence.split(' ')[0];\n    \n    // Check if too many sentences start the same way\n    if (i > 0 && lastStartWord === currentStartWord && Math.random() < 0.8) {\n      // Restructure sentence\n      const restructures = [\n        sent => 'You know, ' + sent.charAt(0).toLowerCase() + sent.slice(1),\n        sent => 'Here\\'s the thing: ' + sent,\n        sent => sent.replace(/^The\\s/, 'This '),\n        sent => sent.replace(/^This\\s/, 'That '),\n        sent => 'Now, ' + sent.charAt(0).toLowerCase() + sent.slice(1),\n        sent => 'Actually, ' + sent.charAt(0).toLowerCase() + sent.slice(1)\n      ];\n      \n      const restructure = restructures[Math.floor(Math.random() * restructures.length)];\n      sentence = restructure(sentence);\n    }\n    \n    // Add occasional contractions\n    if (Math.random() < 0.7) {\n      sentence = sentence\n        .replace(/\\bdo not\\b/g, \"don't\")\n        .replace(/\\bdoes not\\b/g, \"doesn't\")\n        .replace(/\\bdid not\\b/g, \"didn't\")\n        .replace(/\\bwill not\\b/g, \"won't\")\n        .replace(/\\bwould not\\b/g, \"wouldn't\")\n        .replace(/\\bcannot\\b/g, \"can't\")\n        .replace(/\\bshould not\\b/g, \"shouldn't\");\n    }\n    \n    processed.push(sentence);\n    lastStartWord = sentence.split(' ')[0];\n  }\n  \n  text = processed.join(' ');\n  \n  // Remove repetitive transitional phrases\n  text = text.replace(/(In fact|Indeed|Certainly|Obviously|Clearly),?\\s/gi, '');\n  \n  // Fix overly formal constructions\n  text = text.replace(/\\bIn order to\\b/gi, 'To');\n  text = text.replace(/\\bDue to the fact that\\b/gi, 'Because');\n  text = text.replace(/\\bIn the event that\\b/gi, 'If');\n  text = text.replace(/\\bAt this point in time\\b/gi, 'Now');\n  \n  return text;\n}\n\nreturn items.map(item => ({\n  ...item,\n  json: {\n    ...item.json,\n    text: breakAIPatterns(item.json.text)\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -5120,
+        -200
+      ],
+      "id": "0659a888-5056-403f-896b-3e722bbf83d8",
+      "name": "Pattern Breaker"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Final Polish - adds subtle human inconsistencies\nfunction finalPolish(text) {\n  \n  // 1. Vary dash usage\n  text = text.replace(/\\s—\\s/g, () => {\n    const dashes = [' — ', '—', ' - ', '--', ' – '];\n    return dashes[Math.floor(Math.random() * dashes.length)];\n  });\n  \n  // 2. Occasionally miss Oxford commas (Indians often skip them)\n  text = text.replace(/, and\\b/g, (match) => {\n    return Math.random() < 0.25 ? ' and' : match;\n  });\n  \n  // 3. Vary ellipsis usage\n  text = text.replace(/\\.\\.\\.+/g, () => {\n    return Math.random() < 0.5 ? '...' : '…';\n  });\n  \n  // 4. Natural emphasis variations\n  const emphasisPatterns = [\n    { find: /\\breally\\b/gi, replace: ['really', 'REALLY', '*really*', 'seriously'] },\n    { find: /\\bvery\\b/gi, replace: ['very', 'quite', 'pretty', 'super'] },\n    { find: /\\bimportant\\b/gi, replace: ['important', 'crucial', 'key', 'critical'] },\n    { find: /\\bgreat\\b/gi, replace: ['great', 'good', 'solid', 'excellent'] }\n  ];\n  \n  emphasisPatterns.forEach(({find, replace}) => {\n    text = text.replace(find, (match) => {\n      if (Math.random() < 0.3) {\n        return replace[Math.floor(Math.random() * replace.length)];\n      }\n      return match;\n    });\n  });\n  \n  // 5. Add micro-inconsistencies\n  \n  // Sometimes spell out numbers, sometimes don't\n  text = text.replace(/\\b(\\d)\\b/g, (match, num) => {\n    const spellings = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];\n    return Math.random() < 0.2 ? spellings[parseInt(num)] : match;\n  });\n  \n  // Mix British and American spellings (common in India)\n  if (Math.random() < 0.3) {\n    text = text.replace(/\\borganize\\b/g, 'organise');\n    text = text.replace(/\\brealize\\b/g, 'realise');\n  }\n  if (Math.random() < 0.3) {\n    text = text.replace(/\\bcolour\\b/g, 'color');\n    text = text.replace(/\\bfavour\\b/g, 'favor');\n  }\n  \n  // 6. Add subtle opinion markers\n  const opinionMarkers = [\n    'I think',\n    'in my experience', \n    'from what I\\'ve seen',\n    'if you ask me',\n    'personally',\n    'I\\'ve found that',\n    'I believe'\n  ];\n  \n  // Add 1-2 opinion markers\n  const paragraphs = text.split('\\n\\n');\n  const numMarkers = Math.min(1 + Math.floor(Math.random() * 2), Math.floor(paragraphs.length / 3));\n  \n  for (let i = 0; i < numMarkers; i++) {\n    const targetPara = Math.floor(Math.random() * paragraphs.length);\n    const marker = opinionMarkers[Math.floor(Math.random() * opinionMarkers.length)];\n    \n    if (!paragraphs[targetPara].toLowerCase().includes(marker)) {\n      const sentences = paragraphs[targetPara].split('. ');\n      if (sentences.length > 1) {\n        const targetSent = 1 + Math.floor(Math.random() * (sentences.length - 1));\n        sentences[targetSent] = marker.charAt(0).toUpperCase() + marker.slice(1) + ', ' + \n                               sentences[targetSent].charAt(0).toLowerCase() + \n                               sentences[targetSent].slice(1);\n        paragraphs[targetPara] = sentences.join('. ');\n      }\n    }\n  }\n  \n  text = paragraphs.join('\\n\\n');\n  \n  // 7. Add natural micro-errors that humans make (very sparingly)\n  if (Math.random() < 0.1) {\n    // Occasionally double a word\n    const words = text.split(' ');\n    const position = Math.floor(Math.random() * words.length);\n    if (words[position].length < 4 && !words[position].includes('.')) {\n      words[position] = words[position] + ' ' + words[position];\n      text = words.join(' ');\n      // Then fix it as if catching the error\n      text = text.replace(/(\\b\\w{1,3}\\b) \\1/g, '$1');\n    }\n  }\n  \n  // 8. Add current context markers\n  const contextMarkers = [\n    'these days',\n    'right now',\n    'currently', \n    'lately',\n    'as I write this',\n    'today',\n    'this year'\n  ];\n  \n  // Add 1-2 context markers\n  const sentences = text.split('. ');\n  const numContexts = Math.min(1 + Math.floor(Math.random() * 2), Math.floor(sentences.length / 20));\n  \n  for (let i = 0; i < numContexts; i++) {\n    const position = Math.floor(Math.random() * sentences.length);\n    const marker = contextMarkers[Math.floor(Math.random() * contextMarkers.length)];\n    \n    if (!sentences[position].includes(marker)) {\n      sentences[position] = sentences[position].replace(\n        /(\\bis\\b|\\bare\\b|\\bhas been\\b|\\bhave been\\b)/i,\n        (match) => marker + ' ' + match\n      );\n    }\n  }\n  \n  return sentences.join('. ');\n}\n\nreturn items.map(item => ({\n  ...item,\n  json: {\n    ...item.json,\n    text: finalPolish(item.json.text)\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -4680,
+        -200
+      ],
+      "id": "d9523335-8e7b-4fce-b93b-ba8fe794f50a",
+      "name": "Final Polish"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1SHYUMs7rc3q2Np9wkG3lsK2WvQp15dfoZ0MoqiZSthg",
+          "mode": "list",
+          "cachedResultName": "TEMPLATE",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1SHYUMs7rc3q2Np9wkG3lsK2WvQp15dfoZ0MoqiZSthg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 186876273,
+          "mode": "list",
+          "cachedResultName": "Indmoney",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1SHYUMs7rc3q2Np9wkG3lsK2WvQp15dfoZ0MoqiZSthg/edit#gid=186876273"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -4460,
+        -200
+      ],
+      "id": "3bf44f32-ab7e-4411-9b87-257840777d1e",
+      "name": "Get Previous Posts",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "UaLi74Oa3Du014Ub",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "previous-posts",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        -4240,
+        -200
+      ],
+      "id": "72ae67d1-0940-4ff7-a29c-ca1ef49ba8cb",
+      "name": "Aggregate Posts"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are in charge of internal linking between blog posts. \n\nFor each new blog post that comes across your desk, your job is to look through previously posted blogs,l2 and l1 pages  find all interlinking opportunities in the content.\n\nTo choose the best internal linking opportunities you must: \n\n- Read the previous blog post, l2 and l1 pages summaries and look through their keywords. If there is a match where the previous blog post is highly relevant, then this is an internal linking opportunity. \n\n- Do not link if it is not highly relevant. Only make a link if it makes sense and adds value for the reader. \n\nOnce you've found the best linking opportunities, you must update the blog post with the internal links. To do this you must: \n\n- Add the link of the previous blog post at the relevant section of the new blog post. Drop the URL at the place which makes most sense. Later we will hyperlink the URL to the word in the blog post which it is placed next to. So your placing is very important. \n\nMake sure to not delete any existing URLs or change anything about the blog post provided to you. You must only add new internal linking URLs and output the revised blog post. \n\nYour output must be the blog post given to you plus the new urls. Don't remove any info. \n\nDon't return the previous blog posts. Only return the current blog post with the internal links added.\n\nAt the end of the response, provide a list of all internal URLs added, with a short label of which topic each one covers.\nFormat:\n\nhttps://example.com/topic-a – Topic A Title\n\nhttps://example.com/topic-b – Topic B Title\n\nCurrent blog Post: \n{{ $('Final Polish').item.json.text }}\n\nPrevious Blog Posts: \n{{ $json['previous-posts'].toJsonString().split() }}",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -3800,
+        -200
+      ],
+      "id": "647d44f4-53b3-4233-9448-d7592cdd021c",
+      "name": "Internal Linking"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=DO NOT OUTPUT ANYTHING OTHER THAN THE CODE.\n\nGenerate WordPress HTML for this blog post:\n{{ $json.text }}\n\nRequirements:\n- Modern, mobile-responsive design\n- Dark theme friendly (white text #ffffff)\n- Clean typography (20px font, 1.6 line height)\n- Proper semantic HTML5\n- Blue accent color (#00c2ff) for links and borders\n- Include: Title, reading time, key takeaways, TOC, content, internal links list, FAQ\n- Natural spacing with <br><br> between sections\n- NO emojis\n- All hyperlinks properly formatted\n\nStructure:\n1. Title (with primary keyword: {{ $('Grab New Cluster').item.json['Primary Keyword'] }})\n2. Reading time estimate\n3. Key takeaways (bullet points)\n4. Table of contents (jump links)\n5. Main content (with all formatting preserved)\n6. Internal links section\n7. FAQ section\n\nOutput pure HTML only, no markdown, no code blocks.",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -3200,
+        -200
+      ],
+      "id": "a5bbaf50-d052-4d33-ac4c-37e2727ef4b9",
+      "name": "Generate HTML"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Create a URL slug for this blog:\n{{ $('Internal Linking').item.json.text }}\n\nRules:\n- Maximum 4-5 words\n- Must include: {{ $('Grab New Cluster').item.json['Primary Keyword'] }}\n- All lowercase\n- Hyphens between words\n- No special characters\n- SEO optimized\n\nOutput only the slug, nothing else.",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -2600,
+        -200
+      ],
+      "id": "18b118cc-60fb-4501-abdb-1bd88ac1f30f",
+      "name": "Create Slug"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Extract the blog title from:\n{{ $('Internal Linking').item.json.text }}\n\nMust include: {{ $('Grab New Cluster').item.json['Primary Keyword'] }}\n\nMake it:\n- Compelling and clickable\n- Clear about the benefit\n- 60 characters or less\n- Natural sounding\n\nOutput only the title text, no quotes or formatting.",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -2020,
+        -200
+      ],
+      "id": "1d11d428-3226-49f4-a048-1a47ac09cbb5",
+      "name": "Extract Title"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Create a meta description for this blog:\n{{ $('Internal Linking').item.json.text }}\n\nRequirements:\n- 150-160 characters max\n- Include primary keyword: {{ $('Grab New Cluster').item.json['Primary Keyword'] }}\n- Include other keywords if natural: {{ $('Grab New Cluster').item.json.Keywords }}\n- Compelling and action-oriented\n- Clear value proposition\n- Natural language\n\nOutput only the meta description text.",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -1420,
+        -200
+      ],
+      "id": "ae7cae6d-4d4c-4b7c-86ab-a69a529b228d",
+      "name": "Create Meta Description"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "doc-name",
+              "name": "document_name",
+              "value": "={{ $('Grab New Cluster').item.json.Cluster }} - {{ $('Extract Title').item.json.text }}",
+              "type": "string"
+            },
+            {
+              "id": "html-content",
+              "name": "html_content",
+              "value": "={{ $('Generate HTML').item.json.text }}",
+              "type": "string"
+            },
+            {
+              "id": "folder-id",
+              "name": "drive_folder_id",
+              "value": "1tr9zjWhfda1giCiHVDxkSDLmW9ocMpWn",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -820,
+        -200
+      ],
+      "id": "3792ed30-0e66-4da2-a3ff-b7cdc9beb0b3",
+      "name": "Set Doc Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "const boundary = 'divider';\nconst docName = $input.first().json.document_name;\nconst folderId = $input.first().json.drive_folder_id;\nconst htmlContent = $input.first().json.html_content;\n\nconst metadata = JSON.stringify({\n  name: docName,\n  mimeType: \"application/vnd.google-apps.document\",\n  parents: [folderId]\n});\n\nconst htmlWithStyles = `\n<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body {\n      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n      line-height: 1.6;\n      color: #333;\n      max-width: 800px;\n      margin: 0 auto;\n      padding: 20px;\n    }\n    h1, h2, h3 {\n      margin-top: 24px;\n      margin-bottom: 16px;\n    }\n    p {\n      margin-bottom: 12px;\n    }\n    ul, ol {\n      margin-bottom: 16px;\n    }\n    li {\n      margin-bottom: 8px;\n    }\n    a {\n      color: #00c2ff;\n    }\n    blockquote {\n      border-left: 4px solid #00c2ff;\n      padding-left: 16px;\n      margin: 16px 0;\n      font-style: italic;\n    }\n  </style>\n</head>\n<body>\n  ${htmlContent}\n</body>\n</html>\n`;\n\nlet body = `--${boundary}\\r\\n`;\nbody += `Content-Type: application/json; charset=UTF-8\\r\\n`;\nbody += `\\r\\n`;\nbody += `${metadata}\\r\\n`;\nbody += `--${boundary}\\r\\n`;\nbody += `Content-Type: text/html\\r\\n`;\nbody += `\\r\\n`;\nbody += `${htmlWithStyles}\\r\\n`;\nbody += `--${boundary}--\\r\\n`;\n\nreturn {\n  rawData: body\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -380,
+        -200
+      ],
+      "id": "a3f47858-5370-4e93-80f7-8b95efa641cf",
+      "name": "Prepare Doc Request"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.googleapis.com/upload/drive/v3/files",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googleDriveOAuth2Api",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "uploadType",
+              "value": "multipart"
+            },
+            {
+              "name": "supportsAllDrives",
+              "value": "true"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "multipart/related; boundary=divider",
+        "body": "={{ $json.rawData }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        60,
+        -200
+      ],
+      "id": "7c45ca9d-cadc-4f93-942a-0fe7f8509ca8",
+      "name": "Create Google Doc",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "YVXRBr3w8ZuzeDOu",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "15D_JEYCUzRiFzP2JGNdjH3JYK1vD33tJIyceGth8o24",
+          "mode": "list",
+          "cachedResultName": "Copy of MF Content Gap",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15D_JEYCUzRiFzP2JGNdjH3JYK1vD33tJIyceGth8o24/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1305585444,
+          "mode": "list",
+          "cachedResultName": "MF Evergreen",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15D_JEYCUzRiFzP2JGNdjH3JYK1vD33tJIyceGth8o24/edit#gid=1305585444"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Meta description": "={{ $('Create Meta Description').item.json.text }}",
+            "Title": "={{ $('Extract Title').item.json.text }}",
+            "Slug ": "={{ $('Create Slug').item.json.text }}",
+            "Doc Link": "=https://docs.google.com/document/d/{{ $('Create Google Doc').item.json.id }}",
+            "Cluster": "={{ $('Grab New Cluster').item.json.Cluster }}"
+          },
+          "matchingColumns": [
+            "Cluster"
+          ],
+          "schema": [
+            {
+              "id": "Pillar",
+              "displayName": "Pillar",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Cluster",
+              "displayName": "Cluster",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Intent",
+              "displayName": "Intent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Keywords",
+              "displayName": "Keywords",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Primary Keyword",
+              "displayName": "Primary Keyword",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Slug ",
+              "displayName": "Slug ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Meta description",
+              "displayName": "Meta description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Doc Link",
+              "displayName": "Doc Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Dates",
+              "displayName": "Dates",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Blog-link",
+              "displayName": "Blog-link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Completed\r\n",
+              "displayName": "Completed\r\n",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        500,
+        -200
+      ],
+      "id": "753820e0-a422-4b94-b396-866f943c3606",
+      "name": "Update Sheet - Final",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "UaLi74Oa3Du014Ub",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "temperature": 0.8
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -6660,
+        20
+      ],
+      "id": "d0977109-fc7f-4b13-8cfe-6a23aabf3877",
+      "name": "Gemini Model 2",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "U8mX3Bu7SGMsm9Jt",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "temperature": 0.75
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -3720,
+        20
+      ],
+      "id": "b0469d41-4b6a-430e-a94e-6fd3f633f0a8",
+      "name": "Gemini Model 4",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "U8mX3Bu7SGMsm9Jt",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "temperature": 0.7
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -2520,
+        20
+      ],
+      "id": "1490eb9f-cbfb-40ae-b0f5-4e59cda74f83",
+      "name": "Gemini Model 6",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "U8mX3Bu7SGMsm9Jt",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "temperature": 0.7
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -1920,
+        20
+      ],
+      "id": "a04efe17-a2c2-4d35-bae6-26b29fdf271b",
+      "name": "Gemini Model 7",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "U8mX3Bu7SGMsm9Jt",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "temperature": 0.7
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -1320,
+        20
+      ],
+      "id": "1c5f0ea8-0b16-4718-bda0-68cac47079a8",
+      "name": "Gemini Model 8",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "U8mX3Bu7SGMsm9Jt",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -7200,
+        -200
+      ],
+      "id": "599b3b15-8739-4a98-a385-2ec42cfc7e91",
+      "name": "Wait 1",
+      "webhookId": "wait-1-webhook"
+    },
+    {
+      "parameters": {
+        "amount": 8
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -6380,
+        -200
+      ],
+      "id": "133cb51f-cd4e-4f56-8b28-4304b93f32d8",
+      "name": "Wait 2",
+      "webhookId": "wait-2-webhook"
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -5780,
+        -200
+      ],
+      "id": "04dd5875-eb42-4ba8-aa4c-0e04fd8bc13b",
+      "name": "Wait 3",
+      "webhookId": "wait-3-webhook"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -5340,
+        -200
+      ],
+      "id": "0cb5f7ed-c8f5-4e7a-aa0b-ef6bfb23a914",
+      "name": "Wait 4",
+      "webhookId": "wait-4-webhook"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -4900,
+        -200
+      ],
+      "id": "ce213116-a1cc-4a46-b340-2b5e90a23ae2",
+      "name": "Wait 5",
+      "webhookId": "wait-5-webhook"
+    },
+    {
+      "parameters": {
+        "amount": 8
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -4020,
+        -200
+      ],
+      "id": "c9db6114-4fee-44f9-ac4a-bfce3bff4c60",
+      "name": "Wait 6",
+      "webhookId": "wait-6-webhook"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -3420,
+        -200
+      ],
+      "id": "bef23bb3-6840-467c-8b05-dd866c8f1218",
+      "name": "Wait 7",
+      "webhookId": "wait-7-webhook"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -2820,
+        -200
+      ],
+      "id": "252ba2ca-8f2e-4971-9dd9-1145db8061d4",
+      "name": "Wait 8",
+      "webhookId": "wait-8-webhook"
+    },
+    {
+      "parameters": {
+        "amount": 3
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -2240,
+        -200
+      ],
+      "id": "d3897923-d895-4ee1-a38e-d3f69c7785e2",
+      "name": "Wait 9",
+      "webhookId": "wait-9-webhook"
+    },
+    {
+      "parameters": {
+        "amount": 3
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1640,
+        -200
+      ],
+      "id": "0fa7b68a-1060-40cb-bf56-62eddef3835c",
+      "name": "Wait 10",
+      "webhookId": "wait-10-webhook"
+    },
+    {
+      "parameters": {
+        "amount": 3
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1040,
+        -200
+      ],
+      "id": "51e3b53d-a223-42dc-b459-89c96cb17155",
+      "name": "Wait 11",
+      "webhookId": "wait-11-webhook"
+    },
+    {
+      "parameters": {
+        "amount": 3
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -600,
+        -200
+      ],
+      "id": "f3c51ed2-9dde-4911-8ca9-7c848e88b5e6",
+      "name": "Wait 12",
+      "webhookId": "wait-12-webhook"
+    },
+    {
+      "parameters": {
+        "amount": 3
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -160,
+        -200
+      ],
+      "id": "592cf30b-7df5-46e2-bed0-e37257e0797d",
+      "name": "Wait 13",
+      "webhookId": "wait-13-webhook"
+    },
+    {
+      "parameters": {
+        "amount": 3
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        280,
+        -200
+      ],
+      "id": "b69ad3cf-dc49-4267-b15a-5af4681186fd",
+      "name": "Wait 14",
+      "webhookId": "wait-14-webhook"
+    },
+    {
+      "parameters": {
+        "content": "## ENHANCED HUMANIZED BLOG GENERATOR\n\nThis workflow produces undetectable, human-like content through:\n\n1. **Context Injection** - Dynamic writing personas and market context\n2. **Multi-Layer Humanization** - 3 layers of natural language processing\n3. **Pattern Breaking** - Removes AI tells and repetitive structures\n4. **Indian Market Focus** - Deep integration of local context\n5. **Natural Variability** - Intentional inconsistencies that humans have\n\nKey improvements:\n- Rotating writer personas\n- Conversational interruptions\n- Natural errors and corrections\n- Time-aware content\n- Opinion markers\n- Indian financial terminology\n- Variable formatting\n- Thinking-out-loud moments",
+        "height": 400,
+        "width": 400,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -9160,
+        -360
+      ],
+      "typeVersion": 1,
+      "id": "22cb253e-7eb7-4db4-b6c9-e467206c20d2",
+      "name": "Workflow Overview"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "temperature": 0.85
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -7920,
+        20
+      ],
+      "id": "da3411b5-16e6-4656-a106-44f4af73066f",
+      "name": "Gemini Model 1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "U8mX3Bu7SGMsm9Jt",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -3100,
+        20
+      ],
+      "id": "cfa97ed7-d7b7-4a7c-b57a-2166132d988b",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "U8mX3Bu7SGMsm9Jt",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -6080,
+        20
+      ],
+      "id": "02816916-de2b-4a0c-80bc-7cc0c8c89712",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "U8mX3Bu7SGMsm9Jt",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Grab New Cluster",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Grab New Cluster": {
+      "main": [
+        [
+          {
+            "node": "Context Injector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Context Injector": {
+      "main": [
+        [
+          {
+            "node": "Enhanced Preliminary Plan",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enhanced Preliminary Plan": {
+      "main": [
+        [
+          {
+            "node": "Enhanced Research",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enhanced Research": {
+      "main": [
+        [
+          {
+            "node": "Wait 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fix Links": {
+      "main": [
+        [
+          {
+            "node": "Create Detailed Plan",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Detailed Plan": {
+      "main": [
+        [
+          {
+            "node": "Wait 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write Human Blog": {
+      "main": [
+        [
+          {
+            "node": "Wait 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Humanization Layer 1": {
+      "main": [
+        [
+          {
+            "node": "Wait 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pattern Breaker": {
+      "main": [
+        [
+          {
+            "node": "Wait 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Final Polish": {
+      "main": [
+        [
+          {
+            "node": "Get Previous Posts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Previous Posts": {
+      "main": [
+        [
+          {
+            "node": "Aggregate Posts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate Posts": {
+      "main": [
+        [
+          {
+            "node": "Wait 6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Internal Linking": {
+      "main": [
+        [
+          {
+            "node": "Wait 7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate HTML": {
+      "main": [
+        [
+          {
+            "node": "Wait 8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Slug": {
+      "main": [
+        [
+          {
+            "node": "Wait 9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Title": {
+      "main": [
+        [
+          {
+            "node": "Wait 10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Meta Description": {
+      "main": [
+        [
+          {
+            "node": "Wait 11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Doc Fields": {
+      "main": [
+        [
+          {
+            "node": "Wait 12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Doc Request": {
+      "main": [
+        [
+          {
+            "node": "Wait 13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Google Doc": {
+      "main": [
+        [
+          {
+            "node": "Wait 14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini Model 2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Detailed Plan",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini Model 4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Internal Linking",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini Model 6": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Slug",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini Model 7": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Extract Title",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini Model 8": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Meta Description",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 1": {
+      "main": [
+        [
+          {
+            "node": "Fix Links",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 2": {
+      "main": [
+        [
+          {
+            "node": "Write Human Blog",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 3": {
+      "main": [
+        [
+          {
+            "node": "Humanization Layer 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 4": {
+      "main": [
+        [
+          {
+            "node": "Pattern Breaker",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 5": {
+      "main": [
+        [
+          {
+            "node": "Final Polish",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 6": {
+      "main": [
+        [
+          {
+            "node": "Internal Linking",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 7": {
+      "main": [
+        [
+          {
+            "node": "Generate HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 8": {
+      "main": [
+        [
+          {
+            "node": "Create Slug",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 9": {
+      "main": [
+        [
+          {
+            "node": "Extract Title",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 10": {
+      "main": [
+        [
+          {
+            "node": "Create Meta Description",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 11": {
+      "main": [
+        [
+          {
+            "node": "Set Doc Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 12": {
+      "main": [
+        [
+          {
+            "node": "Prepare Doc Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 13": {
+      "main": [
+        [
+          {
+            "node": "Create Google Doc",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 14": {
+      "main": [
+        [
+          {
+            "node": "Update Sheet - Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini Model 1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Enhanced Preliminary Plan",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Generate HTML",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Write Human Blog",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "246a80ae-25e1-4ad6-a2a6-0de05d42bf75",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8caaa6e070f72a23d4630e84fa42da0e19cc1d766a86a2f74262104dd7a0935d"
+  },
+  "id": "ZKuTiGLxGhgRhbmQ",
+  "tags": []
+}
