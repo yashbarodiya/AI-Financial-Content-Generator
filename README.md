@@ -1,4 +1,4 @@
-# INDMoney — Enhanced Humanized Blog Generator (Python + Agents + Notebooks)
+# — Enhanced Humanized Blog Generator (Python + Agents + Notebooks)
 
 This repository is a **clean, GitHub-ready port** of your n8n workflow to Python. It includes:
 - Modular source code under `src/`
